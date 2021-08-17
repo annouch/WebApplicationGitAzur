@@ -8,6 +8,7 @@ namespace WebApplicationGitAzur.Models
         [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
+        public string observation { get; set; }
     }
 
     public class ExternalLoginListViewModel
