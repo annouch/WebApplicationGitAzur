@@ -19,10 +19,10 @@ namespace WebApplicationGitAzur.Models
         {
         }
 
-        public DbSet<WebApplicationGitAzur.Models.Album> Albums { get; set; }
+        public System.Data.Entity.DbSet<WebApplicationGitAzur.Models.Album> Albums { get; set; }
 
-        public DbSet<WebApplicationGitAzur.Models.Artist> Artists { get; set; }
+        public System.Data.Entity.DbSet<WebApplicationGitAzur.Models.Artist> Artists { get; set; }
 
-        public DbSet<WebApplicationGitAzur.Models.Genre> Genres { get; set; }
+        public System.Data.Entity.DbSet<WebApplicationGitAzur.Models.Genre> Genres { get; set; }
     }
 }

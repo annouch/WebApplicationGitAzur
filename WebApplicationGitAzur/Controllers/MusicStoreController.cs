@@ -10,18 +10,18 @@ using WebApplicationGitAzur.Models;
 
 namespace WebApplicationGitAzur.Controllers
 {
-    public class StoreManagerController : Controller
+    public class MusicStoreController : Controller
     {
         private WebApplicationGitAzurDB db = new WebApplicationGitAzurDB();
 
-        // GET: StoreManager
+        // GET: MusicStore
         public ActionResult Index()
         {
             var albums = db.Albums.Include(a => a.Artist).Include(a => a.Genre);
             return View(albums.ToList());
         }
 
-        // GET: StoreManager/Details/5
+        // GET: MusicStore/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -36,7 +36,7 @@ namespace WebApplicationGitAzur.Controllers
             return View(album);
         }
 
-        // GET: StoreManager/Create
+        // GET: MusicStore/Create
         public ActionResult Create()
         {
             ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId", "Name");
@@ -44,7 +44,7 @@ namespace WebApplicationGitAzur.Controllers
             return View();
         }
 
-        // POST: StoreManager/Create
+        // POST: MusicStore/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -63,7 +63,7 @@ namespace WebApplicationGitAzur.Controllers
             return View(album);
         }
 
-        // GET: StoreManager/Edit/5
+        // GET: MusicStore/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -80,7 +80,7 @@ namespace WebApplicationGitAzur.Controllers
             return View(album);
         }
 
-        // POST: StoreManager/Edit/5
+        // POST: MusicStore/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -98,7 +98,7 @@ namespace WebApplicationGitAzur.Controllers
             return View(album);
         }
 
-        // GET: StoreManager/Delete/5
+        // GET: MusicStore/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -113,7 +113,7 @@ namespace WebApplicationGitAzur.Controllers
             return View(album);
         }
 
-        // POST: StoreManager/Delete/5
+        // POST: MusicStore/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
