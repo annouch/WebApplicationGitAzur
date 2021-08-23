@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using WebApplicationGit.Entities.MusicStoreEntities;
 
-namespace WebApplicationGitAzur.Models
+namespace WebApplicationGit.Entities.MusicStoreContext
 {
     public class WebApplicationGitAzurDB : DbContext
     {
@@ -19,10 +20,10 @@ namespace WebApplicationGitAzur.Models
         {
         }
 
-        public System.Data.Entity.DbSet<WebApplicationGitAzur.Models.Album> Albums { get; set; }
+        public System.Data.Entity.DbSet<Album> Albums { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplicationGitAzur.Models.Artist> Artists { get; set; }
+        public System.Data.Entity.DbSet<Artist> Artists { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplicationGitAzur.Models.Genre> Genres { get; set; }
+        public System.Data.Entity.DbSet<Genre> Genres { get; set; }
     }
 }
