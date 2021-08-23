@@ -6,7 +6,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using WebApplicationGitAzur.Models;
+using WebApplicationGit.Entities.MusicStoreContext;
+using WebApplicationGit.Entities.MusicStoreEntities;
 
 namespace WebApplicationGitAzur.Controllers
 {
